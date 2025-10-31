@@ -1,0 +1,39 @@
+31-10-2025--19-00
+npx expo start --tunnel
+tive que reiniciar no celular para funcionar
+no celular na escola
+
+agora estudar para criar uma branch para subir 
+no projeto inicial
+
+
+
+
+
+31-10-2025
+
+npm install yet
+
+npx expo start
+
+na escola
+npx expo start --tunnel
+
+
+implementacao futura
+Passo 3: Garantir Segurança no Build (Recomendado com EAS)
+Se você usar o EAS Build (serviço de build em nuvem do Expo) para criar seu aplicativo final (APK/IPA), a chave não deve depender do seu .env local. Você deve transformá-la em um "Segredo" do EAS.
+
+Instale o EAS CLI:
+
+Bash
+
+npm install -g eas-cli
+Crie o Segredo: Use o comando para armazenar a chave de API nos servidores seguros do Expo.
+
+Bash
+
+eas secret:create --scope project --name GOOGLE_MAPS_API_KEY --value 'AIzaSyAoyddD8DpOe_-icx-rk69Px6K8fa_nXnY'
+O Resultado: Agora, quando o EAS construir seu app, ele injetará o valor seguro no process.env.GOOGLE_MAPS_API_KEY para o seu app.config.js usar, garantindo que sua chave nunca saia dos ambientes controlados, atendendo completamente ao requisito de segurança.
+
+Ao seguir esses passos, a chave de API não estará mais visível no código-fonte do projeto (seja ele no GitHub ou no próprio aplicativo), garantindo a segurança da sua aplicação.
